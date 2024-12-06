@@ -1,0 +1,10 @@
+logging:
+  level: INFO
+  format: '%(asctime)s - %(levelname)s - %(message)s'
+
+credentials:
+  QIANFAN_AK: "JRLvQvdUbRXWtYG1hKmbrkwY"
+  QIANFAN_SK: "RhFqbIO1tDTEgzpEIkqHKa4LpQOQu1vq"
+
+model:
+  name: "ERNIE-4.0-8K"  # ERNIE-4.0-8K  Mixtral-8x7B-Instruct
