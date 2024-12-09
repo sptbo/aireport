@@ -60,13 +60,13 @@ def process_files(prompt, source_file_paths, template_file_path):
             return "调用代码模型生成代码时出错，请检查网络或模型设置。"
 
         try:
-            result = execute_code(code, dataframes, source_file_paths, template_file_path)
-            logging.info("代码执行完成，得到结果。")
+            execute_code(code, dataframes, source_file_paths, template_file_path)
+            logging.info("代码执行完成，得到结果。(main)")
         except Exception as e:
-            logging.error(f"执行代码生成结果时出错：{e}")
+            logging.error(f"执行代码生成结果时出错(main)：{e}")
             return "执行代码生成结果时出错，请检查代码或数据是否正确。"
 
-        output_file_path = save_result(result, template_file_path)
+        output_file_path = save_result(template_file_path)
         logging.info("结果已保存到模板文件。")
 
         return output_file_path
